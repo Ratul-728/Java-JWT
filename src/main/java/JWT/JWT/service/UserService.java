@@ -38,9 +38,9 @@ public class UserService implements UserDetailsService {
         log.info("Getting All user");
         return ResponseEntity.ok(userRepository.findAll());
     }
-    public ResponseEntity<?> getUserByUsername(String username){
+    public User getUserByUsername(String username){
         log.info("Fetching user for {}", username);
-        return ResponseEntity.ok(userRepository.findByUsername(username));
+        return userRepository.findByUsername(username);
     }
 
     public ResponseEntity<?> addRoleToUser(String username, String name){
