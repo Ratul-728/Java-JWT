@@ -3,7 +3,6 @@ package JWT.JWT.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.bytebuddy.build.Plugin;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ import java.util.Collection;
 @Table(name = "user")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String username;
@@ -24,4 +23,5 @@ public class User {
 
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<Role> roles = new ArrayList<>();
+
 }

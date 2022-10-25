@@ -5,6 +5,7 @@ import JWT.JWT.domain.User;
 import JWT.JWT.service.RoleService;
 import JWT.JWT.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
